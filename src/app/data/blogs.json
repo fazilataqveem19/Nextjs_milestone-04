@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Exploring the Mountains of Northern Pakistan",
+    "author": "Fazila Taqveem",
+    "date": "2024-10-06",
+    "content": "Northern Pakistan is home to some of the world's most stunning mountains, including the Karakoram Range and the Himalayas. In this post, I share my experience trekking through the Hunza Valley, visiting fairy-tale-like villages, and witnessing the breathtaking beauty of Passu Cones.",
+    "image": "/image1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "A Journey Through the Magical Streets of Venice",
+    "author": "Fazila Taqveem",
+    "date": "2024-10-07",
+    "content": "Venice, with its maze-like streets and canals, is a city like no other. I take you through the enchanting sights of Venice, from the iconic gondola rides to hidden alleys filled with rich history and culture.",
+    "image": "/image2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Discovering the Deserts of Morocco",
+    "author": "Fazila Taqveem",
+    "date": "2024-10-08",
+    "content": "Morocco's Sahara Desert offers a unique travel experience. In this post, I describe my camel trek through the endless dunes, spending nights under the stars, and learning about the fascinating Berber culture.",
+    "image": "/image3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Beauty of Bali’s Hidden Waterfalls",
+    "author": "Fazila Taqveem",
+    "date": "2024-10-09",
+    "content": "Bali is not just about beaches and temples. In this post, I explore Bali's lush rainforests and hidden waterfalls, perfect for those who want to connect with nature and enjoy the island's tranquil beauty.",
+    "image": "/image4.jpg"
+  }
+]

@@ -8,12 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        bodyFont: ["Poppins", "sans-serif"], // Add fallback fonts
+        titleFont: ["Montserrat", "sans-serif"], // Add fallback fonts
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primaryColor: "#111111",
+        secondaryColor: "#9b59b6",
+        bgColor: "#34495e",
+      },
+      boxShadow: {
+        btnShadow: "0px 0px 18px 3px rgba(52, 73, 94, 1)", // Ensure proper spacing
       },
     },
   },
   plugins: [],
 };
+  
 export default config;
