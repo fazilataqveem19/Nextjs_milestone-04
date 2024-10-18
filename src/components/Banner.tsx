@@ -7,9 +7,12 @@ import bannerImgTwo from "/public/bannerImgTwo.jpg";
 import bannerImgThree from "/public/bannerImgThree.jpg";
 import bannerImgFour from "/public/bannerImgFour.jpg";
 
+interface ArrowProps {
+  onClick: () => void; // onClick function prop
+}
+
 // SampleNextArrow Component
-function SampleNextArrow(props: any) {
-  const { onClick } = props;
+const SampleNextArrow = ({ onClick }: ArrowProps) => {
   return (
     <div
       className="w-10 h-10 md:w-12 md:h-12 absolute top-1/2 transform -translate-y-1/2 right-10 z-30 border-[1px] border-gray-900 bg-black/50 hover:bg-black shadow-btnShadow flex items-center justify-center cursor-pointer"
@@ -18,11 +21,10 @@ function SampleNextArrow(props: any) {
       <FaChevronRight className="text-gray-300 text-lg" />
     </div>
   );
-}
+};
 
 // SamplePrevArrow Component
-function SamplePrevArrow(props: any) {
-  const { onClick } = props;
+const SamplePrevArrow = ({ onClick }: ArrowProps) => {
   return (
     <div
       className="w-10 h-10 md:w-12 md:h-12 absolute top-1/2 transform -translate-y-1/2 left-10 z-30 border-[1px] border-gray-900 bg-black/50 hover:bg-black shadow-btnShadow flex items-center justify-center cursor-pointer"
@@ -31,7 +33,7 @@ function SamplePrevArrow(props: any) {
       <FaChevronLeft className="text-gray-300 text-lg" />
     </div>
   );
-}
+};
 
 // Banner Component
 const Banner = () => {
@@ -41,8 +43,8 @@ const Banner = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow onClick={() => {}} />, // Placeholder function
+    prevArrow: <SamplePrevArrow onClick={() => {}} />, // Placeholder function
   };
 
   return (

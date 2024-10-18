@@ -39,12 +39,14 @@ const Header = () => {
         </div>
 
         {/* Profile & Sign In/Out */}
-        <div className="flex items-center gap-8 text-lg ml-4"> {/* Added margin-left */}
-          <div className="flex items-center gap-2"> {/* Added gap between image and text */}
-            <img
+        <div className="flex items-center gap-8 text-lg ml-4">
+          <div className="flex items-center gap-2">
+            <Image
               className="w-8 h-8 rounded-full"
               src={session?.user?.image ? session.user.image : "/profile.jpg"}
               alt="Profile"
+              width={32} // Use appropriate width
+              height={32} // Use appropriate height
             />
             <p className="text-sm font-medium">
               {session?.user?.name ? session.user.name : "Hello Stranger"}

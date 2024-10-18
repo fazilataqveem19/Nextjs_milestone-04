@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Blog {
   id: number;
   title: string;
@@ -13,15 +15,18 @@ const BlogList = ({ blogs }: { blogs: Blog[] }) => {
       {blogs.length > 0 ? (
         blogs.map((blog) => (
           <div key={blog.id} className="p-6 border border-gray-200 rounded-lg shadow-md">
-            <div className="overflow-hidden rounded-md"> 
-              <img 
+            <div className="overflow-hidden rounded-md">
+              <Image 
                 src={blog.image} 
                 alt={blog.title} 
-                className="h-48 w-full object-cover transition-transform duration-150 transform hover:scale-110" // Faster hover effect
+                width={500} // Set appropriate width
+                height={300} // Set appropriate height
+                className="h-48 w-full object-cover transition-transform duration-150 transform hover:scale-110" // Hover effect
+                loading="lazy" // Optional: lazy loading
               />
             </div>
-            <h2 className="text-2xl font-bold mb-2 mt-4">{blog.title}</h2> 
-            <p className="text-lg text-gray-800 mb-4 mt-1">{blog.content}</p> 
+            <h2 className="text-2xl font-bold mb-2 mt-4">{blog.title}</h2>
+            <p className="text-lg text-gray-800 mb-4 mt-1">{blog.content}</p>
             <small className="text-base text-gray-700"> 
               Written by {blog.author} on {blog.date}
             </small>

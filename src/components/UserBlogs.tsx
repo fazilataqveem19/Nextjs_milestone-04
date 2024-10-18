@@ -1,6 +1,7 @@
 "use client"; 
 import { useState } from "react";
 import { useSession } from "next-auth/react";
+import Image from 'next/image';
 
 interface Blog {
   id: number;
@@ -91,10 +92,12 @@ const UserBlogs = () => {
           blogs.map((blog) => (
             <div key={blog.id} className="p-6 border border-gray-200 rounded-lg shadow-md">
               <div className="overflow-hidden rounded-md"> 
-                <img 
+                <Image 
                   src={blog.image} 
                   alt={blog.title} 
-                  className="h-48 w-full object-cover transition-transform duration-150 transform hover:scale-110" // Faster hover effect
+                  className="h-48 w-full object-cover transition-transform duration-150 transform hover:scale-110"
+                  width={500} // Fixed width
+                  height={300} // Fixed height
                 />
               </div>
               <h2 className="text-2xl font-bold mb-2 mt-4">{blog.title}</h2> 
@@ -139,7 +142,13 @@ const UserBlogs = () => {
           className="my-2"
         />
         {newBlog.image && (
-          <img src={newBlog.image} alt="Preview" className="h-48 w-full object-cover rounded mb-4" />
+          <Image 
+            src={newBlog.image} 
+            alt="Preview" 
+            className="h-48 w-full object-cover rounded mb-4" 
+            width={500} // Fixed width
+            height={300} // Fixed height
+          />
         )}
         <button onClick={addOrUpdateBlog} className="bg-blue-500 text-white p-2 rounded transition duration-300 hover:bg-blue-600">
           {isEditing ? "Update Blog" : "Add Blog"}
@@ -149,4 +158,4 @@ const UserBlogs = () => {
   );
 };
 
-export default UserBlogs
+export default UserBlogs;
